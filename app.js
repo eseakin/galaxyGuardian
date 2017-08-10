@@ -321,7 +321,7 @@ class Game {
     this.chargeUp = new SoundPool(7, 'chargeUp');
     this.chargeRelease = new SoundPool(7, 'chargeRelease');
 
-    this.backgroundAudio = new Audio('sounds/music2.mp3');
+    this.backgroundAudio = new Audio('sounds/music.mp3');
     this.backgroundAudio.loop = true;
     this.backgroundAudio.volume = settings.mainVolume * settings.musicVolume;
     this.backgroundAudio.load();
@@ -742,7 +742,7 @@ class SoundPool {
 
     if(type === 'missile') {
       for (let i = 0; i < this.maxSize; i++) {
-        const missile = new Audio('sounds/paralysis.mp3');
+        const missile = new Audio('sounds/missile.mp3');
         missile.volume = settings.mainVolume * settings.effectsVolume;
         missile.load();
         this.pool[i] = missile;
@@ -763,7 +763,7 @@ class SoundPool {
       }
     } else if(type === 'bossBullet') {
       for (let i = 0; i < this.maxSize; i++) {
-        const explosion = new Audio('sounds/whoosh.ogg');
+        const explosion = new Audio('sounds/bossBullet.ogg');
         explosion.volume = settings.mainVolume * settings.effectsVolume;
         explosion.load();
         this.pool[i] = explosion;
