@@ -1,8 +1,213 @@
 body {
   text-align: center;
+  background: url("images/siteBackground.jpg");
+  font-family: 'Permanent Marker', cursive;
+  user-select: none;
+  cursor: default;
+  background-color: #222;
+  color: #e80000;
+
+}
+
+.byline {
+  font-family: serif;
+  color: #aaa;
+}
+
+/*Menu*/
+.menu {
+  position: absolute;
+  top: 165px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  /*border: 1px solid pink;*/
+  display: none;
+  z-index: 4;
+}
+
+.menu p {
+  font-size: 35px;
+  margin: 0px;
+  transition: .75s all;
+}
+
+.pause {
+  margin: 5px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  z-index: 5;
+}
+
+.menu p:hover, .pause:hover {
+  cursor: pointer !important;
+  color: #ff7f00 !important;
+}
+
+.youtube {
+  position: absolute;
+  top: 290px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  display: none;
+  z-index: 4;
+}
+
+form {
+  margin: 20px auto;
+  width: 870px;
+}
+
+.settingsColumn {
+  width: 250px;
+  height: 150px;
+  margin: 0 20px;
+  display: inline-block;
+  text-align: right;
+  /*border: 1px solid pink;*/
+  float: left;
+}
+
+.settingsColumn div {
+  margin: 0;
+  padding: 0;
+}
+
+.settingsColumn input {
+  width: 50px;
+  padding-left: 2px;
+  margin: 2px;
+}
+
+.settingsColumn span {
+  padding-right: 5px;
+}
+
+/*HUD*/
+#shields {
+  text-align: left;
+  margin: 5px;
+  position: absolute;
+  bottom: 25px;
+  left: 10px;
+  z-index: 6;
+  height: 20px;
+}
+
+#shieldContainer {
+  /*border: 1px solid pink;*/
+}
+
+.shield {
+  margin: 0 -1px;
+  padding: 0;
+  width: 50px;
+  height: 15px;
+  background: rgba(96, 191, 255, .85);
+  display: inline-block;
+  border-top: 2px solid #99d5ff;
+  border-bottom: 2px solid #99d5ff;
+  transition: 2s width linear, .5s background-color;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.shield:first-child {
+  border-top-left-radius: 200%;
+}
+
+.shield:last-child {
+}
+
+#bossLifeBarContainer {
+  text-align: left;
+  margin: 5px;
+  position: absolute;
+  top: 25px;
+  left: 262px;
+  background-color: transparent;
+  z-index: 6;
+  height: 20px;
+  width: 500px;
+  /*border: 1px solid pink;*/
+  border: 2px solid #6b4f2c;
+  border-radius: 4px;
+  display: none;
+}
+
+#bossLifeBar {
+  display: none;
+  text-align: left;
+  margin: 5px;
+  position: absolute;
+  top: 25px;
+  left: 262px;
+  background: #e80000;
+  z-index: 7;
+  height: 20px;
+  width: 0px;
+  transition: 1s width ease-out, .5s background-color;
+  /*border: 1px solid pink;*/
+  border-top: 2px solid #6b4f2c;
+  border-bottom: 2px solid #6b4f2c;
+  border-left: 2px solid #6b4f2c;
+  border-radius: 4px;
+}
+
+/*Score*/
+#scoreContainer {
+  display: none;
+  width: 100%;
+  /*border: 1px solid pink;*/
+  margin: auto;
+}
+
+.score {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+/*Canvas*/
+#canvasContainer {
+  position: relative;
+  width: 1024px;
+  height: 512px;
+  margin: 50px auto;
+}
+
+canvas {
+  position: absolute;
+  background: transparent;
+  top: 0;
+  left: 0;
 }
 
 #background {
-  background: transparent;
-  margin: 50px auto;
+  z-index: 0;
 }
+
+#ship {
+  z-index: 1;
+}
+
+#main {
+  z-index: 2;
+}
+
+#titles {
+  z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+

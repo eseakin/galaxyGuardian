@@ -4,17 +4,64 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="./favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <title>Wiggle Worm</title>
+    <title>Galaxy Guardian</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="canvasContainer">
 
-    <canvas id="background" width="512" height="512">
-      Your browser does not support canvas. Please try again with a different browser.
-    </canvas>
+      <canvas id="background" width="1024" height="512">
+        Your browser does not support canvas. Please try again with a different browser.
+      </canvas>
+      <canvas id="ship" width="1024" height="512"></canvas>
+      <canvas id="main" width="1024" height="512"></canvas>
+      <canvas id="titles" width="1024" height="512"></canvas>
 
+      <div id="scoreContainer">
+        <span class="pause" onclick="game.pauseGame()">Press ESC to Pause</span>
+        <span class="score">SCORE: <span id="score"></span></span>
+        <div id="bossLifeBarContainer"></div>
+        <span id="bossLifeBar"></span>
+        <span id="shields">
+          <div>SHIELDS:</div>
+          <div id="shieldContainer"></div>
+        </span>
+      </div>
+      <span id="menuBar"></span>
+
+      <div class="menu" id="menu">
+        <p onclick="game.start()">Play</p>
+        <p onclick="game.settingsMenu()">Settings</p>
+      </div>
+
+      <div class="menu" id="game-over">
+        <p onclick="game.restart()">Restart</p>
+        <p onclick="game.settingsMenu()">Settings</p>
+      </div>
+      
+      <div class="menu" id="pause">
+        <p onclick="game.unpause()">Resume</p>
+        <p onclick="game.settingsMenu()">Settings</p>
+      </div>
+      
+      <div class="menu" id="loading">
+        <img src="images/loading.png" />
+        <p id="progress">0%</p>
+      </div>
+
+      <div class="youtube" id="youtube">
+        <iframe width="271" height="165" src="https://www.youtube.com/embed/pLKeZukedZo" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="menu" id="settingsMenu">
+        <p onclick="game.submitSettings()">Save and Restart</p>
+        <p onclick="game.cancelSettings()">Cancel</p>
+        <form id="settingsForm"></form>
+      </div>
+    </div>
+<span class="byline">Created by Eric Eakin<br>Optimized for Google Chrome</span>
     <script type="text/javascript" src="./app.js" charset="utf-8"></script>
   </body>
 </html>

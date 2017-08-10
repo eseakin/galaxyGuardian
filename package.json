@@ -1,5 +1,5 @@
 {
-  "name": "wiggleworm",
+  "name": "galaxyGuardian",
   "version": "1.0.0",
   "description": "An HTML5 snake-like game",
   "main": "app.js",
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eseakin/wiggleworm.git"
+    "url": "git+https://github.com/eseakin/galaxyGuardian.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Eric Eakin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eseakin/wiggleworm/issues"
